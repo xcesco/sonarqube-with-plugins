@@ -5,6 +5,23 @@ This image was created to share an already-done configuration of Sonarqube comun
 The orginal github repo is [here](https://github.com/SonarSource/docker-sonarqube/). 
 The docker image is the [official sonarqube image](https://hub.docker.com/_/sonarqube?tab=description).
 
+## How to build
+
+```shell
+docker build -t xcesco/sonarqube-with-plugins:1.1.0 .
+```
+
+## How to execute
+```shell
+docker run --name sonarqube-with-plugins-1.1.0 -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.1.0
+```
+
+
+## How to pull image
+```shell
+docker push xcesco/sonarqube-with-plugins:1.1.0
+```
+
 ## Installed plugins
 List of preinstalled plugin:
 
@@ -12,3 +29,36 @@ List of preinstalled plugin:
 - [sonar-groovy-plugin-1.8.jar](https://github.com/Inform-Software/sonar-groovy/releases/download/1.8/sonar-groovy-plugin-1.8.jar)
 - [checkstyle-sonar-plugin-9.0.1.jar](https://github.com/checkstyle/sonar-checkstyle/releases/download/9.0.1/checkstyle-sonar-plugin-9.0.1.jar)
 - [sonar-flutter](https://github.com/insideapp-oss/sonar-flutter/releases/download/0.4.0/sonar-flutter-plugin-0.4.0.jar)
+
+
+## How to perform a scan
+From [sonarscanner docs](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/):
+Define a `sonar-project.properties` file like this:
+```properties
+# must be unique in a given SonarQube instance
+sonar.projectKey=my:project
+
+# --- optional properties ---
+
+# defaults to project key
+#sonar.projectName=My project
+# defaults to 'not provided'
+#sonar.projectVersion=1.0
+ 
+# Path is relative to the sonar-project.properties file. Defaults to .
+#sonar.sources=.
+sonar.sources=lib
+sonar.tests=test
+ 
+# Encoding of the source code. Default is default system encoding
+sonar.sourceEncoding=UTF-8
+```
+Execute sonarscanner in docker container:
+```
+docker run \
+    --rm \
+    -e SONAR_HOST_URL="http://${SONARQUBE_URL}" \
+    -e SONAR_LOGIN="myAuthenticationToken" \
+    -v "${YOUR_REPO}:/usr/src" \
+    sonarsource/sonar-scanner-cli
+```    
