@@ -11,3 +11,4 @@ List of preinstalled plugin:
 - [sonar-dependency-check-plugin-2.0.8.jar](https://github.com/dependency-check/dependency-check-sonar-plugin/releases/download/2.0.8/sonar-dependency-check-plugin-2.0.8.jar)
 - [sonar-groovy-plugin-1.8.jar](https://github.com/Inform-Software/sonar-groovy/releases/download/1.8/sonar-groovy-plugin-1.8.jar)
 - [checkstyle-sonar-plugin-9.0.1.jar](https://github.com/checkstyle/sonar-checkstyle/releases/download/9.0.1/checkstyle-sonar-plugin-9.0.1.jar)
+- [sonar-flutter](https://github.com/insideapp-oss/sonar-flutter/releases/download/0.4.0/sonar-flutter-plugin-0.4.0.jar)
