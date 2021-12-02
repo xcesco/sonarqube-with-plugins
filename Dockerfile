@@ -5,7 +5,7 @@
 FROM sonarqube:8.9.3-community
 
 LABEL author="Francesco Benincasa"
-LABEL version="1.0.1"
+LABEL version="1.1.0"
 
 
 RUN wget https://github.com/dependency-check/dependency-check-sonar-plugin/releases/download/2.0.8/sonar-dependency-check-plugin-2.0.8.jar \
