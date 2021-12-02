@@ -17,4 +17,7 @@ RUN wget https://github.com/Inform-Software/sonar-groovy/releases/download/1.8/s
 RUN wget https://github.com/checkstyle/sonar-checkstyle/releases/download/9.0.1/checkstyle-sonar-plugin-9.0.1.jar \
   -P /opt/sonarqube/extensions/plugins/
 
+RUN wget https://github.com/insideapp-oss/sonar-flutter/releases/download/0.4.0/sonar-flutter-plugin-0.4.0.jar \
+  -P /opt/sonarqube/extensions/plugins/
+
 EXPOSE 9000
