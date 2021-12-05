@@ -53,7 +53,7 @@ sonar.tests=test
 # Encoding of the source code. Default is default system encoding
 sonar.sourceEncoding=UTF-8
 ```
-Execute sonarscanner in docker container:
+To Execute sonar-scanner in docker container:
 ```
 docker run \
     --rm \
@@ -62,3 +62,9 @@ docker run \
     -v "${YOUR_REPO}:/usr/src" \
     sonarsource/sonar-scanner-cli
 ```    
+
+The `${SONARQUBE_URL}` rapresents the sonarqube's URL. Since sonar-scanner run in a container, the specified URL have to work with IP of sonarqube instance running in container. To obtain this information is necessary execute this command: 
+
+```shell
+docker inspect sonarqube-with-plugins-1.1.0 | grep IPAddress
+```
