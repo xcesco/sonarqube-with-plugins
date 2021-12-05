@@ -5,21 +5,23 @@ This image was created to share an already-done configuration of Sonarqube comun
 The orginal github repo is [here](https://github.com/SonarSource/docker-sonarqube/). 
 The docker image is the [official sonarqube image](https://hub.docker.com/_/sonarqube?tab=description).
 
+The latest version of image is `1.2.0`
+
 ## How to build
 
 ```shell
-docker build -t xcesco/sonarqube-with-plugins:1.1.0 .
+docker build -t xcesco/sonarqube-with-plugins:{LATEST_VERSION} .
 ```
 
 ## How to execute
 ```shell
-docker run --name sonarqube-with-plugins-1.1.0 -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.1.0
+docker run --name sonarqube-with-plugins-{LATEST_VERSION} -d -p  9000:9000 xcesco/sonarqube-with-plugins:{LATEST_VERSION}
 ```
 
 
 ## How to pull image
 ```shell
-docker push xcesco/sonarqube-with-plugins:1.1.0
+docker push xcesco/sonarqube-with-plugins:{LATEST_VERSION}
 ```
 
 ## Installed plugins
@@ -66,5 +68,5 @@ docker run \
 The `${SONARQUBE_URL}` rapresents the sonarqube's URL. Since sonar-scanner run in a container, the specified URL have to work with IP of sonarqube instance running in container. To obtain this information is necessary execute this command: 
 
 ```shell
-docker inspect sonarqube-with-plugins-1.1.0 | grep IPAddress
+docker inspect sonarqube-with-plugins-{LATEST_VERSION} | grep IPAddress
 ```
