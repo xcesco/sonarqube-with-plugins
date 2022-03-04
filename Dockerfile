@@ -2,14 +2,14 @@
 # - dependency-check-sonar-plugin
 # https://github.com/dependency-check
 # https://github.com/dependency-check/dependency-check-sonar-plugin
-FROM sonarqube:9.2.1-community
+FROM sonarqube:9.3.0-community
 
 LABEL author="Francesco Benincasa"
-LABEL version="1.2.0"
+LABEL version="1.2.1"
 
-ARG OWASP_DEPENDENCY_CHECK_VERSION=2.0.8
+ARG OWASP_DEPENDENCY_CHECK_VERSION=3.0.1
 ARG GROOVY_PLUGIN_VERSION=1.8
-ARG CHECKSTYLE_PLUGIN=9.1
+ARG CHECKSTYLE_PLUGIN=9.3
 ARG FLUTTER_PLUGIN=0.4.0
 
 

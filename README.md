@@ -5,7 +5,7 @@ This image was created to share an already-done configuration of Sonarqube comun
 The orginal github repo is [here](https://github.com/SonarSource/docker-sonarqube/). 
 The docker image is the [official sonarqube image](https://hub.docker.com/_/sonarqube?tab=description).
 
-The latest version of image is `1.2.0`
+The latest version of image is `1.2.1`
 
 ## How to build
 
