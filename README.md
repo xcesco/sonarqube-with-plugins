@@ -23,7 +23,7 @@ docker run --name sonarqube-with-plugins-{LATEST_VERSION} -d -p  9000:9000 xcesc
 ```shell
 docker push xcesco/sonarqube-with-plugins:{LATEST_VERSION}
 ```
-
+tLR:Q;B%y3c6Jz?
 ## Installed plugins
 List of preinstalled plugin:
 
