@@ -10,20 +10,20 @@ The latest version of image is `1.2.1`
 ## How to build
 
 ```shell
-docker build -t xcesco/sonarqube-with-plugins:{LATEST_VERSION} .
+docker build -t xcesco/sonarqube-with-plugins:1.2.1 .
 ```
 
 ## How to execute
 ```shell
-docker run --name sonarqube-with-plugins-{LATEST_VERSION} -d -p  9000:9000 xcesco/sonarqube-with-plugins:{LATEST_VERSION}
+docker run --name sonarqube-with-plugins-1.2.1 -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.2.1
 ```
 
 
 ## How to pull image
 ```shell
-docker push xcesco/sonarqube-with-plugins:{LATEST_VERSION}
+docker push xcesco/sonarqube-with-plugins:1.2.1
 ```
-tLR:Q;B%y3c6Jz?
+
 ## Installed plugins
 List of preinstalled plugin:
 
