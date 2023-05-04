@@ -2,7 +2,7 @@
 # - dependency-check-sonar-plugin
 # https://github.com/dependency-check
 # https://github.com/dependency-check/dependency-check-sonar-plugin
-FROM sonarqube:9.3.0-community
+FROM sonarqube:9.9.1-community
 
 LABEL author="Francesco Benincasa"
 LABEL version="1.2.1"
