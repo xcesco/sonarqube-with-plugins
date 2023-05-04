@@ -5,24 +5,27 @@ This image was created to share an already-done configuration of Sonarqube comun
 The orginal github repo is [here](https://github.com/SonarSource/docker-sonarqube/). 
 The docker image is the [official sonarqube image](https://hub.docker.com/_/sonarqube?tab=description).
 
-The latest version of image is `1.2.1`
+The latest version of image is `1.3.0`
 
 ## How to build
-
+With this command, the image's build is done.
 ```shell
-docker build -t xcesco/sonarqube-with-plugins:1.2.1 .
+docker build -t xcesco/sonarqube-with-plugins:1.3.0 .
 ```
+
+## How to pull image
+This is the command I use to push local image to dockerhub.
+```shell
+docker push xcesco/sonarqube-with-plugins:1.3.0
+```
+
 
 ## How to execute
 ```shell
-docker run --name sonarqube-with-plugins-1.2.1 -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.2.1
+docker run --name sonarqube-with-plugins-1.3.0 -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.3.0
 ```
 
 
-## How to pull image
-```shell
-docker push xcesco/sonarqube-with-plugins:1.2.1
-```
 
 ## Installed plugins
 List of preinstalled plugin:
