@@ -25,6 +25,18 @@ docker push xcesco/sonarqube-with-plugins:1.3.0
 docker run --name sonarqube-with-plugins-1.3.0 -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.3.0
 ```
 
+## Execute for multiple platform
+To build for x86 and ARM architecture:
+
+```shell
+docker buildx build --platform linux/amd64,linux/arm64 -t xcesco/sonarqube-with-plugins:1.3.0 . 
+```
+
+To build and push directly to dockerhub:
+```shell
+docker buildx build --platform linux/amd64,linux/arm64 --push -t xcesco/sonarqube-with-plugins:1.3.0 . 
+```
+
 
 
 ## Installed plugins

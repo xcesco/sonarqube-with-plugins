@@ -26,3 +26,4 @@ RUN wget https://github.com/insideapp-oss/sonar-flutter/releases/download/${FLUT
   -P /opt/sonarqube/extensions/plugins/
 
 EXPOSE 9000
+
