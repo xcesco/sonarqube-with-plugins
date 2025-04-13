@@ -2,19 +2,19 @@
 # - dependency-check-sonar-plugin
 # https://github.com/dependency-check
 
-FROM sonarqube:10.2.1-community
+FROM sonarqube:25.4.0.105899-community
 
 LABEL author="Francesco Benincasa"
-LABEL version="1.4.0"
+LABEL version="1.5.0"
 
 # https://github.com/dependency-check/dependency-check-sonar-plugin
-ARG OWASP_DEPENDENCY_CHECK_VERSION=4.0.0
+ARG OWASP_DEPENDENCY_CHECK_VERSION=5.0.0
 # https://github.com/Inform-Software/sonar-groovy
 ARG GROOVY_PLUGIN_VERSION=1.8
 # https://github.com/checkstyle/sonar-checkstyle
-ARG CHECKSTYLE_PLUGIN=10.12.3
+ARG CHECKSTYLE_PLUGIN=10.23.0
 # https://github.com/insideapp-oss/sonar-flutter
-ARG FLUTTER_PLUGIN=0.5.0
+ARG FLUTTER_PLUGIN=0.5.2
 
 
 RUN wget https://github.com/dependency-check/dependency-check-sonar-plugin/releases/download/${OWASP_DEPENDENCY_CHECK_VERSION}/sonar-dependency-check-plugin-${OWASP_DEPENDENCY_CHECK_VERSION}.jar \

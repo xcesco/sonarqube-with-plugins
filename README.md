@@ -5,36 +5,36 @@ This image was created to share an already-done configuration of Sonarqube comun
 The orginal github repo is [here](https://github.com/SonarSource/docker-sonarqube/). 
 The docker image is the [official sonarqube image](https://hub.docker.com/_/sonarqube?tab=description).
 
-The latest version of image is `1.4.0`
+The latest version of image is `1.5.0`
 
 ## How to build
 With this command, the image's build is done.
 ```shell
-docker build -t xcesco/sonarqube-with-plugins:1.4.0 .
+docker build -t xcesco/sonarqube-with-plugins:1.5.0 .
 ```
 
 ## How to pull image
 This is the command I use to push local image to dockerhub.
 ```shell
-docker push xcesco/sonarqube-with-plugins:1.4.0
+docker push xcesco/sonarqube-with-plugins:1.5.0
 ```
 
 
 ## How to execute
 ```shell
-docker run --name sonarqube -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.4.0
+docker run --name sonarqube -d -p  9000:9000 xcesco/sonarqube-with-plugins:1.5.0
 ```
 
 ## Execute for multiple platform
 To build for x86 and ARM architecture:
 
 ```shell
-docker buildx build --platform linux/amd64,linux/arm64 -t xcesco/sonarqube-with-plugins:1.4.0 . 
+docker buildx build --platform linux/amd64,linux/arm64 -t xcesco/sonarqube-with-plugins:1.5.0 . 
 ```
 
 To build and push directly to dockerhub:
 ```shell
-docker buildx build --platform linux/amd64,linux/arm64 --push -t xcesco/sonarqube-with-plugins:1.4.0 . 
+docker buildx build --platform linux/amd64,linux/arm64 --push -t xcesco/sonarqube-with-plugins:1.5.0 . 
 ```
 
 
